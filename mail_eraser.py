@@ -10,12 +10,11 @@ passcode = str(input("\nEnter your password: "))
 
 driver = webdriver.Chrome("C:/ProgramData/chocolatey/lib/chromedriver/tools/Chromedriver.exe")
 driver.get("https://www.gmail.com")
-#LoginID
-#It must be 'find_element' and not 'find_elements'. The latter returns a list of elements
+#Login_ID
 driver.find_element_by_id("identifierId").send_keys(mail_id)
 driver.find_element_by_id("identifierNext").click()
 driver.implicitly_wait(5)
-#LoginPass
+#Login_Password
 driver.find_element_by_name("password").send_keys(passcode)
 driver.find_element_by_id("passwordNext").click()
 driver.implicitly_wait(30)
